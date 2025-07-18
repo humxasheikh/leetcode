@@ -25,5 +25,27 @@ const longestCommonPrefix = (strs: string[]): string => {
   return result;
 };
 
+const optimalSolution = (strs: string[]): string => {
+  // check if the array is null or length is zero, return empty string
+  if (!strs || strs.length === 0) return '';
+  // check if length is one, return the first element
+  if (strs.length === 1) strs[0];
+  // assign the first value to the veriable
+  let match = strs[0];
+  // iterate the array from the 1st element
+  for (const value of strs) {
+    // check if the current index of the array start with the stored value in the local
+    // if no, trim the string from the last until it we have the match value. we have to do this in loop
+    while (!value.startsWith(match)) {
+      match = match.slice(0, -1);
+      if (!match) return match;
+    }
+    // if yes, keep move on the next value of the array
+  }
+  return match;
+};
+
 console.log(longestCommonPrefix(['dog', 'racecar', 'car']));
 console.log(longestCommonPrefix(['flower', 'flow', 'flight']));
+console.log(optimalSolution(['dog', 'racecar', 'car']));
+console.log(optimalSolution(['flower', 'flow', 'flight']));
