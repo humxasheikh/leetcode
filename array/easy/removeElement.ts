@@ -21,14 +21,14 @@ const removeElement = (nums: number[], val: number): number => {
     // check if the current value is same as the val, swap it with the last index and subtract the last index value.
     if (nums[i] === val && i < lastIndex) {
       lastIndex = findLastIndex(lastIndex);
-      console.log(
-        'lastIndex',
-        lastIndex,
-        'current',
-        nums[i],
-        'last',
-        nums[lastIndex]
-      );
+      //   console.log(
+      //     'lastIndex',
+      //     lastIndex,
+      //     'current',
+      //     nums[i],
+      //     'last',
+      //     nums[lastIndex]
+      //   );
       nums[i] = nums[lastIndex];
       nums[lastIndex] = val;
       numberOfSwaps = i;
