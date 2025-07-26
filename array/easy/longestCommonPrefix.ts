@@ -49,3 +49,4 @@ console.log(longestCommonPrefix(['dog', 'racecar', 'car']));
 console.log(longestCommonPrefix(['flower', 'flow', 'flight']));
 console.log(optimalSolution(['dog', 'racecar', 'car']));
 console.log(optimalSolution(['flower', 'flow', 'flight']));
+console.log(optimalSolution(['flower', 'flow', 'flight']));
